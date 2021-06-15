@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>boolean-uk-html-adding-the-rest</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+
+      display: grid;
+
+      grid-template:
+        "header header header header header" 50px
+        ". left-menu-one main right-menu-one ." 1fr
+        ". left-menu-two main-two right-menu-two ." minmax(auto, 200px)
+        ". left-menu-three main-two right-menu-three ." 1fr /
+        1fr minmax(50px, 200px) minmax(150px, 600px) minmax(75px, 300px) 1fr;
+      gap: 20px;
+    }
+
+    .header {
+      grid-area: header;
+      background-color: #ffcc0070;
+    }
+
+    .left-menu-one {
+      grid-area: left-menu-one;
+      background-color: #ff0000c7;
+      border-radius: 15px;
+    }
+    .left-menu-two {
+      grid-area: left-menu-two;
+      background-color: #ff000070;
+      border-radius: 15px;
+    }
+    .left-menu-three {
+      grid-area: left-menu-three;
+      background-color: #ff0000c7;
+      border-radius: 15px;
+    }
+
+    .main {
+      grid-area: main;
+      background-color: #00ff00c7;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+    }
+    .main-two {
+      grid-area: main-two;
+      background-color: #00ff0070;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+    }
+
+    .right-menu-one {
+      grid-area: right-menu-one;
+      background-color: #ff00ffc7;
+      border-radius: 15px;
+    }
+    .right-menu-two {
+      grid-area: right-menu-two;
+      background-color: #ff00ff70;
+      border-radius: 15px;
+    }
+    .right-menu-three {
+      grid-area: right-menu-three;
+      background-color: #ff00ffc7;
+      border-radius: 15px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="header">
+        <picture>
+          <img
+            src="https://www.instituteofexcellence.com/wp-content/uploads/LinkedIn-logo.png"
+            alt="logo"
+            width="50px"
+            height="50px"
+          />
+        </picture>
+      </div>
+      <div class="left-menu-one"></div>
+      <div class="left-menu-two"></div>
+      <div class="left-menu-three"></div>
+      <div class="main"></div>
+      <div class="main-two"></div>
+      <div class="right-menu-one"></div>
+      <div class="right-menu-two"></div>
+      <div class="right-menu-three"></div>
+    </div>
+  </body>
+</html>
